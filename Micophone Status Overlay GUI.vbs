@@ -1,4 +1,4 @@
-' This VBScript installs necessary imports on first launch and opens the Microphone Overlay GUI
+' This VBScript installs necessary imports on first launch and opens the Microphone Status Overlay GUI
 
 ' Create objects for the shell and filesystem
 Set shell = CreateObject("WScript.Shell")
@@ -26,7 +26,7 @@ If fso.FileExists("docs/requirements.txt") Then
     message = message & "    Would you like to proceed with the installation?"
     
     ' Prompt user for confirmation
-    response = MsgBox(message, vbYesNo + vbQuestion, "Microphone Overlay Imports Installer")
+    response = MsgBox(message, vbYesNo + vbQuestion, "Microphone Status Overlay Imports Installer")
     
     If response = vbYes Then        
         ' Install imports silently
@@ -37,11 +37,11 @@ If fso.FileExists("docs/requirements.txt") Then
             ' Rename requirements.txt
             fso.MoveFile "docs/requirements.txt", "docs/requirements_installed.txt"
         Else
-            MsgBox "    There was an error installing the imports. The GUI will not be launched.", vbExclamation, "Microphone Overlay Imports Installer"
+            MsgBox "    There was an error installing the imports. The GUI will not be launched.", vbExclamation, "Microphone Status Overlay Imports Installer"
             launchGUI = False
         End If
     Else
-        MsgBox "    Installation cancelled. The GUI will not be launched.", vbExclamation, "Microphone Overlay Imports Installer"
+        MsgBox "    Installation cancelled. The GUI will not be launched.", vbExclamation, "Microphone Status Overlay Imports Installer"
         launchGUI = False
     End If
 End If
