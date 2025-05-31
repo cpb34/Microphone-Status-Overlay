@@ -1,5 +1,5 @@
 # Microphone Status Overlay
-Overlays the toggle mute status of your microphone for all programs in Windows 11
+Program that overlays the toggle mute status of your microphone for all programs in Windows 11
 
 ## Getting Started
 Open `Microphone Status Overlay.vbs` and click `Yes` in the imports installer screen. That's it!
