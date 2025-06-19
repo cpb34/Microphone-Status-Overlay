@@ -1,0 +1,4 @@
+keyboard
+pillow
+psutil
+PyQt5
